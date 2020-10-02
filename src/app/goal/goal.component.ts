@@ -9,12 +9,12 @@ import { Goal } from '../goal';
 export class GoalComponent implements OnInit {
 
   goals:Goal[] = [
-    {id:1, name:'Watch finding Nemo'},
-    {id:2,name:'Buy Cookies'},
-    {id:3,name:'Get new Phone Case'},
-    {id:4,name:'Get Dog Food'},
-    {id:5,name:'Solve math homework'},
-    {id:6,name:'Plot my world domination plan'},
+    {id:1, name:'Watch finding Nemo' description:'Find an online version and watch merlin find his son'},
+    {id:2,name:'Buy Cookies' description: 'I have to buy cookies for the parrot'},
+    {id:3,name:'Get new Phone Case' description:'Diana has birthday coming up soon'},
+    {id:4,name:'Get Dog Food' description:'pupper likes expensive sancks'},
+    {id:5,name:'Solve math homework' description:'Damn math'},
+    {id:6,name:'Plot my world domination plan' description:'cause I have victory and power in Jesus name'},
   ];
 
   constructor() { }
