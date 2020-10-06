@@ -16,6 +16,9 @@ export class GoalComponent implements OnInit {
     new Goal(4, 'solve math problem', 'damn math'),
     new Goal(5, 'plot my world domination plan','cause I am Victorious')
   ];
+  toggleDetails(index){
+    this.goals[index].showDescription =!this.goals[index].showDescription;
+  }
 
   constructor() { }
 
