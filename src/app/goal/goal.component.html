@@ -1,18 +1,21 @@
-<div>
+<div class ="container">
   <h1>My Goals</h1>
   <hr>
-
   <div class ="row">
-    <div class ="col-md-6">
-      <div *ngFor='let goal of goals; let i =index'>
+    <div class="cols-md-6">
+      <div *ngFor='let goal of goals, let index=1'>
         <div>
-          <h4 id ={{i}} appStrikethrough >{{goal.name}} due to {{goal.completeDate|date|uppercase}}</h4>
-          <button (click)='toggleDetails(i)' class ="btn btn-primary ">Toggle Details</button>
+          <h6 id ={{i}} appStrikethrough>{{goal.name}} due to {{goal.completeDate|Date|uppercase}}</h6>
+          <button (click)='toggleDetail(i)' class = "btn btn-primary">Toggle Details</button>
         </div>
-        <div *ngIf ='goal.showDescription'>
+
+        <div *ngIf = 'goal.showDescription'>
           <app-goal-detail [goal]='goal' (isComplete)='deleteGoal($event,i)'></app-goal-detail>
         </div>
       </div>
+    </div>
+    <div class= "cols-md-6">
+      <app-goal-form></app-goal-form>
     </div>
   </div>
 </div>
