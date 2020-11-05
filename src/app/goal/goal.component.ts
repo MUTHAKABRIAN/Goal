@@ -16,6 +16,13 @@ export class GoalComponent implements OnInit {
     new Goal(4, 'solve math problem', 'damn math', new Date(2018,7,8)),
     new Goal(5, 'plot my world domination plan','cause I am Victorious',new Date(2020,12,12))
   ];
+
+  addNewGoal(goal){
+    let goalLength = this.goals.length;
+    goal.id=goalLength+1;
+    goal.completeDate= new Date(goal.CompleteDate) 
+    this.goals.push(goal)
+  }
   toggleDetails(index){
     this.goals[index].showDescription =!this.goals[index].showDescription;
   }
